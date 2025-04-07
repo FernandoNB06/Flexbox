@@ -1,53 +1,66 @@
 .caja-1{
-    width: 300px;
-    height: 80px;
+    /* flex-basis: 250px;
+    flex-shrink: 1;
+    flex-grow: 1; */
+    flex: 900px 1 1; /*esto hace el trabajo de los 3 de arriba*/
+    /* width: 300px; */
+    /*height: 80px;*/
     background-color: blue;
+    
     font-size: 85px;
     color: white;
+    
 }
 
 .caja-2{
+    flex-shrink: 2; /*hace que se encoja*/
+    flex-grow: 2;
+    flex-basis: 250px;/*para modificarf el ancho es como un wight pero sociado al eje principal*/
     font-size: 85px;
     color: white;
-    width: 300px;
-    height: 80px;
+    /*width: 300px;*/
+    /*height: 80px;*/
     background-color: red;
 }
 .caja-3{
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 250px;
     font-size: 85px;
     color: white;
-    width: 300px;
-    height: 80px;
+    /*width: 300px;*/
+    /*height: 80px;*/
     background-color: orange;
 }
 .caja-4{
     font-size: 85px;
     color: white;
     width: 300px;
-    height: 80px;
+    /*height: 80px;*/
     background-color: violet;
+    order: -1; /*Sirve para colocar una posicion*/
 }
 .caja-5{
     font-size: 85px;
     color: white;
     width: 300px;
-    height: 80px;
+    /*height: 80px;*/
     background-color: darkcyan;
 }
 .caja-6{
     font-size: 85px;
     color: white;
     width: 300px;
-    height: 80px;
+    /*height: 80px;*/
     background-color: green;
 }
 .contenedor{
     display: flex; /*Lo vuelve caja flexible*/
     flex-direction: row; /*"Puede variar entre "row","row-reverse","column","column-reverse""*/
-    justify-content: center; /*center,flex-start,flex-end,space-between*/
-    flex-wrap: wrap; /*cuando no halla espacio lo mande a la siguiente linea*/
-    align-items: flex-end; /*alinea todos los items "flex-end,center,flex-start"*/
+    justify-content: flex-start; /*center,flex-start,flex-end,space-between*/
+    flex-wrap: no-wrap; /*wrap cuando no halla espacio lo mande a la siguiente linea*/
+    align-items: flex-start; /*alinea todos los items "flex-end,center,flex-start"*/
     height: 700px;
     background-color: rgba(0, 0, 0, 0.5);
-    align-content: center; /*center,flex-end,flex-start*/
+    align-content: space-around; /*center,flex-end,flex-start,stretch,space-around*/
 }
